@@ -97,17 +97,3 @@ Data Handling: - Browser LocalStorage (Prototype Persistence)
 
 Frontend prototype built for hackathon demonstration. Designed with
 scalability in mind for production-level deployment.
-
-------------------------------------------------------------------------
-
-## 📷 Demo
-
-(Add screenshots here)
-
-------------------------------------------------------------------------
-
-## 📄 Additional Note
-
-This project demonstrates dynamic UI rendering, state management,
-conditional filtering, and modular frontend architecture within a
-time-constrained hackathon environment.
