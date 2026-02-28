@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>City Event Connect</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>City Event Connect</h1>
+    <p>Discover and Register for Events Across Multiple Colleges</p>
+
+    <button class="add-btn" onclick="openAddModal()">+ Add Event</button>
+</header>
+
+<section class="filters">
+    <h2>Explore Events</h2>
+
+    <input type="text" id="searchInput"
+        placeholder="Search by event title..."
+        onkeyup="displayEvents()">
+
+    <select id="filterCollege" onchange="displayEvents()">
+        <option value="All">All Colleges</option>
+        <option>RGM College</option>
+        <option>IIIT</option>
+        <option>Ashoka Women's College</option>
+        <option>pullaiah College</option>
+        <option>Pulla reddy College</option>
+        <option>Kv subba reddy College</option>
+        <option>Ravindra College</option>
+    </select>
+
+    <select id="filterCategory" onchange="displayEvents()">
+        <option value="All">All Categories</option>
+        <option>Tech</option>
+        <option>Cultural</option>
+        <option>Sports</option>
+    </select>
+
+    <br><br>
+
+    <label>
+        <input type="checkbox"
+            id="upcomingOnly"
+            onchange="displayEvents()">
+        Show Upcoming Events Only
+    </label>
+</section>
+
+<section id="eventsContainer" class="events"></section>
+
+
+<!-- ADD EVENT MODAL -->
+<div id="addEventModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeAddModal()">&times;</span>
+        <h2>Add Event</h2>
+
+        <input type="text" id="title" placeholder="Event Title">
+        <select id="college">
+            <option value="">Select College</option>
+            <option>RGM College</option>
+            <option>IIIT</option>
+            <option>Ashoka Women's College</option>
+            <option>pullaiah College</option>
+            <option>Pulla reddy College</option>
+            <option>Kv subba reddy College</option>
+            <option>Ravindra College</option>
+        </select>
+        <select id="category">
+            <option value="">Select Category</option>
+            <option>Tech</option>
+            <option>Cultural</option>
+            <option>Sports</option>
+        </select>
+        <input type="date" id="date">
+        <input type="text" id="location" placeholder="Event Location">
+        <input type="number" id="fee" placeholder="Registration Fee (₹)">
+
+        <button onclick="addEvent()">Add Event</button>
+    </div>
+</div>
+
+
+<!-- REGISTRATION MODAL -->
+<div id="registrationModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Event Registration</h2>
+
+        <input type="text" id="regName" placeholder="Full Name">
+        <input type="email" id="regEmail" placeholder="Email Address">
+        <input type="tel" id="regPhone" placeholder="Phone Number">
+        <input type="text" id="regCollege" placeholder="Your College Name">
+
+        <button id="registerBtn" onclick="submitRegistration()">Register</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
